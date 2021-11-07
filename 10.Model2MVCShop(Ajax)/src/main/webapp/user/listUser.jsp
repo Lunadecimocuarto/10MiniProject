@@ -151,7 +151,7 @@
 		<td class="ct_line02"></td>
 		<td class="ct_list_b" width="150">
 			회원ID<br>
-			<h7 >(id click:상세정보)</h7>
+			<h7>(id click:상세정보)</h7>
 		</td>
 		<td class="ct_line02"></td>
 		<td class="ct_list_b" width="150">회원명</td>
