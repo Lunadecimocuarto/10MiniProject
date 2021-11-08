@@ -52,6 +52,16 @@
 				$(window.parent.frames["rightFrame"].document.location).attr("href","/product/listProduct?menu=manage")
 			
 			});
+			
+			$(".Depth03:contains('상품검색')").on("click",function(){
+				$(window.parent.frames["rightFrame"].document.location).attr("href","/product/listProduct?menu=search")
+			});
+			
+			$(".Depth03:contains('최근본상품')").on("click",function(){
+				
+				$(window.parent.frames["rightFrame"].document.location).attr("href","javascript:history()")
+			});
+			
 
 		});	
 		 
@@ -73,7 +83,7 @@
 						<td class="Depth03">
 							<!-- ////////////////// jQuery Event 처리로 변경됨 ///////////////////////// 
 							<a href="/user/getUser?userId=${user.userId}" target="rightFrame">개인정보조회</a>	
-							////////////////////////////////////////////////////////////////////////////////////////////////// -->
+							/////////////////////////////////////////////////////////////////////////////////////// -->
 							개인정보조회
 						</td>
 					</tr>
@@ -106,14 +116,14 @@
 					<td class="Depth03">
 					<!-- ////////////////// jQuery Event 처리로 변경됨 /////////////////////////
 						<a href="../product/addProductView.jsp;" target="rightFrame">판매상품등록</a>
-						////////////////////////////////////////////////////////////////////////////////////////////////// -->
+						/////////////////////////////////////////////////////////////////////////////////// -->
 					판매상품등록</td>
 				</tr>
 				<tr>
 					<td class="Depth03">
 					<!-- ////////////////// jQuery Event 처리로 변경됨 /////////////////////////
 						<a href="/product/listProduct?menu=manage"  target="rightFrame">판매상품관리</a>
-						////////////////////////////////////////////////////////////////////////////////////////////////// -->
+						////////////////////////////////////////////////////////////////////////////////// -->
 					판매상품관리</td>
 				</tr>
 				<tr>
@@ -130,8 +140,10 @@
 		<table  border="0" cellspacing="0" cellpadding="0" width="159">
 			<tr>
 				<td class="Depth03">
+				<!-- ////////////////// jQuery Event 처리로 변경됨 /////////////////////////
 					<a href="/product/listProduct?menu=search" target="rightFrame">상 품 검 색</a>
-				</td>
+					////////////////////////////////////////////////////////////////////////////////// -->
+				상품검색</td>
 			</tr>
 			
 			<c:if test="${ !empty user && user.role == 'user'}">
@@ -146,7 +158,11 @@
 				<td class="DepthEnd">&nbsp;</td>
 			</tr>
 			<tr>
-				<td class="Depth03"><a href="javascript:history()">최근 본 상품</a></td>
+			<td class="Depth03">
+			<!-- ////////////////// jQuery Event 처리로 변경됨 /////////////////////////
+				<a href="javascript:history()">최근 본 상품</a>
+				/////////////////////////////////////////////////////////////////////////////////////// -->
+				최근본상품</td>
 			</tr>
 		</table>
 	</td>
